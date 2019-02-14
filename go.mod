@@ -6,5 +6,6 @@ require (
 	github.com/mholt/caddy v0.11.3
 	github.com/mholt/certmagic v0.0.0-20190204191230-f92e85346d81 // indirect
 	github.com/shynome/lego v0.0.0-20190214152521-6bc6cd7fbe0d
+	github.com/xenolf/lego v2.2.0+incompatible
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 )
