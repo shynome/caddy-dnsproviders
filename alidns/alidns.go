@@ -1,4 +1,4 @@
-package alicloud
+package alidns
 
 import (
 	"errors"
@@ -8,7 +8,7 @@ import (
 )
 
 func init() {
-	caddytls.RegisterDNSProvider("alicloud", NewDNSProvider)
+	caddytls.RegisterDNSProvider("alidns", NewDNSProvider)
 }
 
 // NewDNSProvider returns a new Aliyun DNS challenge provider.

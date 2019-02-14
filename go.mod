@@ -7,6 +7,7 @@ require (
 	github.com/google/uuid v1.1.0 // indirect
 	github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af // indirect
 	github.com/json-iterator/go v1.1.5 // indirect
+	github.com/kr/pretty v0.1.0 // indirect
 	github.com/mholt/caddy v0.11.3
 	github.com/mholt/certmagic v0.0.0-20190204191230-f92e85346d81 // indirect
 	github.com/miekg/dns v1.1.4 // indirect
@@ -14,4 +15,5 @@ require (
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/xenolf/lego v2.2.0+incompatible
+	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 )
