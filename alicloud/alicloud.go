@@ -1,4 +1,4 @@
-package alidns
+package alicloud
 
 import (
 	"errors"
