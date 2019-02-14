@@ -8,9 +8,12 @@ import (
 	"github.com/xenolf/lego/providers/dns/alidns"
 )
 
+// Nameservers of ali
+var Nameservers = []string{"dns21.hichina.com:53", "dns22.hichina.com:53"}
+
 func init() {
 	caddytls.RegisterDNSProvider("alidns", NewDNSProvider)
-	dns01.AddRecursiveNameservers([]string{"dns21.hichina.com", "dns22.hichina.com"})(&dns01.Challenge{})
+	dns01.AddRecursiveNameservers(Nameservers)(&dns01.Challenge{})
 }
 
 // NewDNSProvider returns a new Aliyun DNS challenge provider.
