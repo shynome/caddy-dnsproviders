@@ -10,7 +10,7 @@ import (
 
 func init() {
 	caddytls.RegisterDNSProvider("alidns", NewDNSProvider)
-	dns01.AddRecursiveNameservers([]string{"dns21.hichina.com", "dns22.hichina.com"})
+	dns01.AddRecursiveNameservers([]string{"dns21.hichina.com", "dns22.hichina.com"})(&dns01.Challenge{})
 }
 
 // NewDNSProvider returns a new Aliyun DNS challenge provider.
