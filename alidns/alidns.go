@@ -2,13 +2,19 @@ package alidns
 
 import (
 	"errors"
+	"os"
+	"strings"
 
 	"github.com/mholt/caddy/caddytls"
+	"github.com/xenolf/lego/challenge/dns01"
 	"github.com/xenolf/lego/providers/dns/alidns"
 )
 
 func init() {
 	caddytls.RegisterDNSProvider("alidns", NewDNSProvider)
+	if nameservers := os.Getenv("LEGO_NAMESERVERS"); nameservers != "" {
+		dns01.AddRecursiveNameservers(dns01.ParseNameservers(strings.Split(nameservers, ",")))
+	}
 }
 
 // NewDNSProvider returns a new Aliyun DNS challenge provider.
