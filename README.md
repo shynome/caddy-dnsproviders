@@ -6,10 +6,10 @@
 ### usage
 
 ```go
-pakcage caddyhttp
+package caddyhttp
 import (
   "github.com/shynome/caddy-dnsproviders/alidns"
-  acme "github.com/xenolf/lego/acmev2"
+	acme "github.com/xenolf/lego/acmev2"
 )
-var _alidns_init = func (){ acme.RecursiveNameservers =  alidns.Nameservers }()
+var _alidnsInit = func() int { acme.RecursiveNameservers = alidns.Nameservers; return 1 }()
 ```
