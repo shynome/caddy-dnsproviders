@@ -13,6 +13,7 @@ var Nameservers = []string{"dns21.hichina.com:53", "dns22.hichina.com:53"}
 
 func init() {
 	caddytls.RegisterDNSProvider("alidns", NewDNSProvider)
+	caddytls.RegisterDNSProvider("alicloud", NewDNSProvider)
 	dns01.AddRecursiveNameservers(Nameservers)(&dns01.Challenge{})
 }
 

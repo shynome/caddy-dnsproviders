@@ -13,3 +13,18 @@ import (
 )
 var _alidnsInit = func() int { acme.RecursiveNameservers = alidns.Nameservers; return 1 }()
 ```
+
+### caddy config
+
+```conf
+mydomain.com {
+  tls {
+    dns alidns
+  }
+}
+mydomain.com {
+  tls {
+    dns alicloud
+  }
+}
+```
