@@ -11,7 +11,7 @@ import (
   "github.com/shynome/caddy-dnsproviders/alidns"
 	acme "github.com/xenolf/lego/acmev2"
 )
-var _alidnsInit = func() int { acme.RecursiveNameservers = alidns.Nameservers; return 1 }()
+var _alidnsInit = alidns.SetRecursiveNameservers(&acme.RecursiveNameservers)
 ```
 
 ### caddy config
