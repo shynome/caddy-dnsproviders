@@ -1,8 +1,3 @@
-### 警告
-
-使用该插件会更改默认dns服务器为 `dns21.hichina.com,dns22.hichina.com`.		
-更改的原因是使用谷歌dns服务器经常无法申请阿里云域名下的证书
-
 ### usage
 
 ```go
@@ -11,6 +6,7 @@ import (
   "github.com/shynome/caddy-dnsproviders/alidns"
 	acme "github.com/xenolf/lego/acmev2"
 )
+// 如果存在环境变量 RECURSIVE_NAMESERVERS 的话会将 DNS 服务器更改为 RECURSIVE_NAMESERVERS 的值
 var _alidnsInit = alidns.SetRecursiveNameservers(&acme.RecursiveNameservers)
 ```
 
