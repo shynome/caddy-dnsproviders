@@ -9,7 +9,7 @@ var _alidnsInit = func() int {
 	var nameServers []string
 	alidns.SetRecursiveNameservers(&nameServers)
 	if len(nameServers) != 0 {
-		dns01.AddRecursiveNameservers(nameServers)
+		dns01.AddRecursiveNameservers(nameServers)(&dns01.Challenge{})
 		return 1
 	}
 	return 0
