@@ -1,0 +1,17 @@
+package caddyhttp
+
+import (
+	"github.com/shynome/caddy-dnsproviders/alidns"
+	"github.com/xenolf/lego/challenge/dns01"
+)
+
+var _alidnsInit = func() int {
+	var nameServers []string
+	alidns.SetRecursiveNameservers(&nameServers)
+	if len(nameServers) != 0 {
+		dns01.AddRecursiveNameservers(nameServers)
+		return 1
+	}
+	return 0
+}()
+
